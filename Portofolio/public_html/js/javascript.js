@@ -15,9 +15,13 @@ var c1 = [ // change background color
     "rgba(0, 0, 200, 0.2)"
     ];
 function changeBg(a,b){
+    var x = document.getElementsByClassName("tshadow");// para text-shadow
     var y = document.getElementsByClassName("copycolor");//para el color de texto
     var z = document.getElementsByClassName("copycolor2");// para background
     var i;
+    for (i = 0; i <x.length; i++) {
+      x[i].style.textShadow = "1px 1px 1px " + a; 
+    }
     for (i = 0; i <y.length; i++) {
       y[i].style.color = a;
     }
