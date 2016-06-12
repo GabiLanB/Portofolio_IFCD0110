@@ -5,7 +5,7 @@
 }
 html{
     min-height: 100%;
-    background-color: blanchedalmond;
+    background-color: #fffff0;
 }
 body{
     width: 100%;
@@ -13,10 +13,19 @@ body{
     position: relative;
 }
 h1{
+    font-size: 2em;
     text-align: center;
+    color: #adcc00;
+    text-shadow: #fffff0 1px 1px 0;
     height: 10%;
-    border: 1px solid blue;
     padding: 1%; /* esto es para centrar un poco el contenido del h1*/
+}
+h2{
+    font-size: 1.5em;
+    color: #262932;
+}
+h3{
+    font-size: 1.2em;
 }
 
 section.wrap{
@@ -24,39 +33,344 @@ section.wrap{
     min-height: 100%;
     border: 1px solid red;
     position: relative;
+    overflow: hidden;
 }
-header ul{
+section#bigwrap header ul{
     text-align: end;
+    position: absolute;
+    display: none;
+    top: 5px;
+    right: 0;
+    padding-right: 5vw;
+    z-index: 100;
 }
-header ul li{
+section#bigwrap header ul li{
     display: inline-block;
     padding: 5px;
 }
-nav{
-    position: relative;
-    height: 100%;
+section#bigwrap header ul li a{
+    color: snow;
+    text-decoration: none;
 }
-nav div.navchild{
-    position: relative;
+section#bigwrap header ul li img{
+    width: 40px;
+}
+/*************************** BIG WRAP ******************************/
+section#bigwrap{
+    background-image: url("../img/bg/builweb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+div#main, div#slideshow{
+    width: 80%;
+    height: 60vh;
+    margin: 5vh 10%;
+    z-index: 101;
+    }
+    div#slideshow{
+    background-color: rgba(38, 41, 50, 0.5);
+    }
+div#main div:first-child{
     width: 100%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: rgba(38, 41, 50, 0.5);
+    text-align: center;
+}
+div#main div:first-child img{
+    width: 50%;
+    padding-top: 20%;
+}
+div#main div:last-child{
+    height: 20%;
+    border-radius: 10px;
     text-align: center;
     vertical-align: middle;
-    border: 1px solid black;
-    height: 50px;
+    padding-top: 10px;  
 }
-#home{
-    z-index: 2;
-    background-color: red;
+/*************************** Study section **************************/
+section#cv{
+    background-color: #fffff0;
+}
+div.cvstudychild{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    border: 1px solid graytext;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+    height: 50vh;
+    font-weight: bold;
+    opacity: 1;
+}
+div.cvstudychild:hover{
+    box-shadow: gray 3px 3px 3px;
+}
+div.cvstudychild img{
+    max-width: 100%;
+    height: 30%;
+}
+div.cvstudychild span{
+    color: graytext;
+    text-shadow: 1px 1px 1px #fffff0;
+    font-size: 18px;
+}
+div.cvstudychild ul li{
+    list-style-type: none;
+    padding: 3px;
+}
+div.cvstudychild:last-child{
+    margin-bottom: 5%;
+}
+div.cvstudychild#cv h1{
+    height: 20%;
+}
+/***** SKILLS SECTION *****/
+section#skills{
+    background-image: url(../img/bg/skills_bg.jpg);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/******************** MY WORK section ********************/
+section#mywork{
+    background-color: #fffff0;
+}
+div.myworkchild{
+    width: 100%;
+    height: 100vh;
+}
+div.myworkchild div{
+    height: 30%;
+    border: 1px solid black;
+}
+div.myworkchild h2{
+    height: 10vh;
+    text-align: center;
+    padding: 10px;
+    color: #fea314;
+}
+/******************* CONTACT *****************/
+section#contact{
+    background-image: url("../img/bg/contact.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+section#contact div.top-rect {
+    position: absolute;
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    width: 120vw;
+    left: -10vw;
+    height: 300px;
+    min-height: 100%; /*tengo que revisar esto*/
+    top: 100px;
+    bottom: -300px;
+    overflow: hidden;
+    background-color: rgba(38, 41,50, 0.9);
+}
+section#contact h1#fly{
+    position: absolute;
+    top: 50px;
+    font-size: 3em;
+    z-index: 150;
+}
+section#contact div.contactchild{
+    position: relative;
+    width: 80%;
+    margin: 5vh 5vw;
+    color: #fffff0;
+    z-index: 1000;   
+}
+section#contact div#down{
+    border: 3px solid white;
+    margin-top: 20vh;
 }
 
-@media screen and (min-width: 780px){ /* Not Mobile*/
+
+@media screen and (min-width: 680px){ /* Not Mobile*/
     section.wrap{
     width: 100%;
     height: 100vh;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
     }
-}
-
-@media screen and (max-width: 1000px) and (min-width: 780px){ /* Tablets */
+    section.wrap h1{
+        width: 100%;
+    }
+    div.cvstudychild{
+    display: inline-block;
+    height: 60vh;
+    margin-top: 2%;
+    width: 20vw;
+    margin-left: 4vw;
+    }   
+    section#skills{
+    background-repeat: no-repeat;
+    }
+    nav{
+    padding-left: 45%; 
+    padding-right: 5%;
+    position: absolute;
+    z-index: 100;
+    top: 60px;
+    right: 0px;
+    width: 100%;
+    }
+    section#bigwrap header ul{
+    display: block;
+    }
+    div#main, div#slideshow{
+    width: 30%;
+    height: 60vh;
+    margin-left: 5vw;
+    margin-top: 30vh;
+    float:left;
+    }
+    div#slideshow{
+    width: 45%;
+    margin: 30vh auto;
+    clear: right;
+    }
+    div.myworkchild{
+        width: 33%;
+        float: left;
+    }
+    div.myworkchild:last-child{
+        clear: right;
+    }
+    section#contact div.top-rect{
+        height: 120vh;
+    }
+    section#contact div.contactchild{
+        display: inline-block;
+        width: 30vw;
+        height: 60vh;
+        padding: 5vh;
+        margin: 30vh auto;
+        border: 1px solid white;
+    }
+    section#contact div#down{
+        margin-top: 30vh;
+    }
     
 }
 
+@media screen and (max-width: 1000px) and (min-width: 680px){ /* Tablets */
+    div.cvstudychild{
+    margin-left: 3vw;
+    width: 45vw;
+    height: 40vh;
+    } 
+    nav{
+        padding-left: 20%;
+        padding-right: 5%;
+    }
+}
+/************* NAV **********/
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.topnav li {
+    float: left;  
+    overflow: hidden;
+    width: 20%;
+    background-color: rgba(38, 41, 50, 0.5);
+}
+ul.topnav li a {
+  display: inline-block;
+  width: 100%;
+  min-width: 100px;
+  color: snow;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 15px 10px;
+  border-bottom: 1px solid snow;
+  border-top: 1px solid snow;
+  text-decoration: none;
+  text-shadow: #adcc00 1px 1px 1px;
+  transition: 0.6s;
+}
+ul.topnav li a:hover {
+    padding: 2px 10px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    border-bottom: 3px solid #adcc00;
+    transition: 0.3s;
+}
+ul.topnav li.icon {display: none;}
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+    text-align: center;
+    color: snow;
+    padding-top: 12px;
+    font-size: 24px;
+  }
+  ul.topnav li a,ul.topnav li a:hover{
+    border: 0;
+    border-right: 0px;
+    padding: 16px 10px;
+    margin: 0;
+    font-size: 1.2em;
+  }
+  nav{
+      background-color: rgb(38, 41, 50);}
+  ul.topnav li a:hover{
+    transition: 0.5s;
+    color: snow;
+  }
+
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {
+    position: relative;
+    background-color: rgb(38, 41, 50);
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    width: 100%;
+    min-width: 150px;
+    display: block;
+    font-size: 1.2em;
+    text-align: left;
+    padding-left: 30px;
+    border: 1px solid #fffff0;
+    background-color: rgb(38, 41, 50);
+  }
+  ul.topnav.responsive li a:hover{
+    padding-left: 50px;
+    color: #adcc00;
+  }
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    right: 0;
+    top: 0;
+    border: 0 !important;
+    padding-top: 15px;
+  }
+  ul.topnav.responsive li.icon:hover{
+      padding-left: 1px;
+  }
+}
