@@ -1,0 +1,81 @@
+html{
+    background-image: url("backhtml.jpg");
+    background-color: blanchedalmond;
+    padding: 0;
+    margin: 0;
+}
+body{
+    /*background-image: url("back.jpg");
+    background-size: cover;*/
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+div{
+    text-align: center;
+    padding: 50px;
+    min-width: 250px;
+}
+h1{
+    margin: 20px auto;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: black 2px 2px 1px;
+    color: white;
+}
+label, input, button{
+    margin: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 200px;
+    transition: 0.5s ease-in-out;
+    padding: 3px;
+    text-align: center;
+}
+label{
+    color: white;
+    text-shadow: black 1px 1px 1px;
+    font-size: 18px;
+}
+button{
+    width:80px;
+}
+input{ 
+   color: black;
+   margin: 5px auto;
+   
+}
+input:focus,input:hover, input:active{
+    background-color: #ccc;
+}
+input:last-child:focus, input:last-child:active{
+    width: 230px;
+    transition: 2s ease-in-out;
+    appearance: none;
+}
+button{
+    background-color: azure;
+}
+button:hover{
+    background-color: green;
+    opacity: 0.9;
+    color: white;
+    transition: 0.2s linear;
+}
+button#reset:hover{
+    background-color: brown;
+}
+input[type='number'] {      /*hide buttons number*/
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-but,  /*hide buttons number*/
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+img{
+    height: 300px;
+    box-shadow: 0 0 5px white;
+}

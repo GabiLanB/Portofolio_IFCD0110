@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculte I.M.C.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <script src="PasoDeParametros.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1>I.M.C.</h1>
+            <label>Height(cm)</label><br>
+            <input type="number" id="height" placeholder="How tal you are?"></input><br>
+            <label>Weight(kg)</label><br>
+            <input type="number" id="weight" step="0.01" placeholder="How much do you weight?"></input><br>
+            <button onClick="analisiCoporal()">Show</button><br>
+            <label>I.M.C.</label><br>
+            <input type="number" id="imc" step="0.01" placeholder="And you're imc is...."></input><br>
+            <label>You are...</label><br>
+            <input type="text" id="resultadoFinal" placeholder="My opinion is..."></input><br>
+            <label>How do y see you...</label><br>
+            
+            <button type="reset" id="reset" onclick="reset()">Reset</button><br>
+            <img id="image" src="" alt="">
+            <img id="image2" src="" alt="">
+            
+        </div>
+    </body>
+</html>

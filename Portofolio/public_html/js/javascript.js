@@ -38,4 +38,20 @@ function stopAnim(){
     document.getElementById("earth").style.WebkitAnimationPlayState = "paused";
 }
 
+function validar() // calculo letra DNI
+   {var letras=['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E','T'];
+
+    var dni=parseInt(document.formulario.dni.value);
+   
+    if (dni<0 || dni>99999999)
+     {alert("el dni no es válido");}
+
+  
+    var calculada=dni%23;
+    document.formulario.linea.value=letras[calculada];
+   
+   }
+
+
+
 

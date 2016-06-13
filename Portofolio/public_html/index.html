@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--Portofolio personal Adrian-Gabriel Balan
-Imagination is more important that knoledge-->
+Imagination is more important that knowledge-->
 <html>
     <head>
         <title>Portofolio Adrian Gabriel Balan</title>
@@ -34,6 +34,20 @@ Imagination is more important that knoledge-->
         </nav>
         <section id="bigwrap" class="wrap">
             <header>
+                <div id="colors">
+                    <div onmouseover = changeBg(c1[0],c2[0])>
+                        
+                    </div>
+                    <div onmouseover = changeBg(c1[1],c2[1])>
+                        
+                    </div>
+                    <div onmouseover = changeBg(c1[2],c2[2])>
+                        
+                    </div>
+                    <div onmouseover = changeBg(c1[3],c2[3])>
+                        
+                    </div>
+                </div>
                 <ul>
                     <li><a href="https://www.linkedin.com/in/adrian-gabriel-balan-5a4b15b1?trk=hp-identity-name">
                             <img src="img/social_media/linkedin.png" alt="linkedin"/>
@@ -69,7 +83,7 @@ Imagination is more important that knoledge-->
         <section id="cv" class="wrap, copycolor2">
                 <h1 class="copycolor">"La educación es lo que queda una vez que olvidamos todo lo que aprendió en la escuela". - Albert Einstein</h1> 
             
-            <div id="cv1" class="cvstudychild" onmouseover = changeBg(c1[0],c2[0])>
+            <div id="cv1" class="cvstudychild">
                 <h2 class="tshadow">Bachilerato</h2>
                 <img src="img/study/ferdinand.png" alt=""/>
                 <h3>Duration:<br> <span>2002-2006</span></h3>
@@ -80,7 +94,7 @@ Imagination is more important that knoledge-->
                     <li>Other</li>
                 </ul>
             </div>
-            <div id="cv2" class="cvstudychild" onmouseover = changeBg(c1[1],c2[1])>
+            <div id="cv2" class="cvstudychild">
                 <h2 class="tshadow">Universidad</h2>
                 <img src="img/study/feaa.png" alt=""/>
                 <h3>Duration:<br> <span>2010-2016</span></h3>
@@ -91,7 +105,7 @@ Imagination is more important that knoledge-->
                     <li>ERP, CRM</li>
                 </ul>
             </div>
-            <div id="cv3" class="cvstudychild" onmouseover = changeBg(c1[2],c2[2])>
+            <div id="cv3" class="cvstudychild">
                 <h2 class="tshadow">Programacion Web</h2>
                 <img src="img/study/adp.png" alt=""/>
                 <h3>Duration:<br> <span>September-2015(120h)</span></h3>
@@ -102,7 +116,7 @@ Imagination is more important that knoledge-->
                     <li>CSS</li>
                 </ul>
             </div>
-            <div id="cv4" class="cvstudychild" onmouseover = changeBg(c1[3],c2[3])>
+            <div id="cv4" class="cvstudychild">
                 <h2 class="tshadow">Curso IFCD0110</h2>
                 <img src="img/study/adp.png" alt=""/>
                 <h3>Duration:<br> <span>Enero 2016- Junio 2016(580h)</span></h3>
@@ -131,6 +145,7 @@ Imagination is more important that knoledge-->
                 <h2 class="tshadow">Habilidades</h2>
                 <hr>
                 <img src="img/skills/box3.png" alt=""/>
+                <a id="dowcv" href="cv.pdf" download>Download CV<a>
             </div>
         </section>
         <section id="mywork" class="wrap">
@@ -142,25 +157,25 @@ Imagination is more important that knoledge-->
                    <figure class="proiectos">
                         <img src="img/proiectos/lucifer.jpg" alt="Lucifer TV series"/>
                         <figcaption>
-                          Pequeño proiecto sobre una TV series al final del curso HTML5&CSS3
+                          Pequeño proyecto sobre una TV series al final del curso HTML5&CSS3
                         </figcaption>
-                   </figure> 
+                        </a></figure> 
                 </div>
                 <div>
-                   <figure class="proiectos">
+                    <figure class="proiectos"><a href="http://www.gabrielbalan.esy.es/" target="_blank">
                        <img src="img/proiectos/mustang.JPG" alt=""/>
                         <figcaption>
                         Mi primera pagina en Wordpress
-                        </figcaption>
-                   </figure>  
+                        </figcaption></a>
+                    </figure> 
                 </div>
                 <div>
-                   <figure class="proiectos">
+                   <figure class="proiectos"><a href="http://lucifer.esy.es/" target="_blank">
                         <img src="img/proiectos/realmadrid.jpg" alt="Real Madrid"/>
                         <figcaption>
                         Real Madrid fans
                         </figcaption>
-                   </figure>  
+                        </a></figure>  
                 </div>
             </div>
             <div class="myworkchild  copycolor2">
@@ -190,18 +205,27 @@ Imagination is more important that knoledge-->
                     
                 </div>
             </div>
-            <div class="myworkchild   copycolor2">
+            <div class="myworkchild copycolor2">
                 <h1 class="copycolor">
                     Ejemplos JavaScript
                 </h1>
-                <div>
-                   1 
+                <div  class="jsproj">
+                    <a href="jsproject/imc.html"><img src="img/proiectos/imc.png" alt="IMC"/></a>
                 </div>
-                <div>
-                   2 
+                <div   id="dni" class="jsproj">
+                   <h2 class="tshadow">Calcular letra DNI</h2>
+                   <form name="formulario">
+                       <input type="text" name="dni" placeholder="Escriba tu DNI"/><br>
+                       <input type="text" name="linea" id="letra"/><br>
+                       
+                        <input type="button" name="comprobar" value="comprobar" onclick="validar()" />
+                   </form>
                 </div>
-                <div>
-                   3 
+                <div  class="jsproj">
+                    <div class="ball">
+                        <h2>Click</h2>
+                       <div class="point a"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -248,7 +272,7 @@ Imagination is more important that knoledge-->
                         </ul>-->
                     </li>
                 </ul>
-                <footer>Designed by <a href="mailto:igabidev@gmail.com">igabidev</a></footer>
+                
             </div>
             <div class="contactchild">
              <form class="form">
@@ -277,9 +301,11 @@ Imagination is more important that knoledge-->
 		</p>
 	</form>  
             </div>
-           
+           <footer>Designed by <a href="mailto:igabidev@gmail.com">igabidev</a></footer>
         </section>
         
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="js/play.js"></script>
         <script src="js/javascript.js" ></script>
     </body>
 </html>
