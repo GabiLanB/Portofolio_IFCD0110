@@ -32,10 +32,12 @@ function changeBg(a,b){
 function startAnim(){
     // Code for Chrome, Safari, and Opera
     document.getElementById("earth").style.WebkitAnimationPlayState = "running";
+    document.getElementById("seeme").style.WebkitAnimationPlayState = "running";
 }
 function stopAnim(){
     // Code for Chrome, Safari, and Opera
     document.getElementById("earth").style.WebkitAnimationPlayState = "paused";
+    document.getElementById("seeme").style.WebkitAnimationPlayState = "paused";
 }
 
 function validar() // calculo letra DNI

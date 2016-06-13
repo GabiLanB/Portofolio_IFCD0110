@@ -43,10 +43,12 @@ p {
     padding: 20px;
     font-family: "lora";
 }
+#down > p{
+    font-size: 1.2em;
+}
 section.wrap{
     width: 100vw;
     min-height: 100%;
-    border: 1px solid red;
     position: relative;
     overflow: hidden;
 }
@@ -169,7 +171,7 @@ div.cvstudychild ul li{
     list-style-type: none;
     padding: 3px;
 }
-div.cvstudychild:last-child{
+div.cvstudychild{
     margin-bottom: 5%;
 }
 div.cvstudychild#cv h1{
@@ -276,6 +278,39 @@ div.jsproj{
 }
 div.jsproj img{
     width: 80%;
+}.boximg{
+    /**/
+    position: relative;
+    background-image: url("../img/skills/gabidev.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#seeme{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #fffff0;
+    -moz-animation: showcode 10s  infinite linear;
+    -webkit-animation: showcode 10s infinite linear;
+    animation-play-state: paused;
+}
+@-moz-keyframes showcode{
+    0%{
+        height: 100%;
+    }
+    100%{
+        height: 0px;
+    }
+}
+@-webkit-keyframes showcode{
+    0%{
+        height: 100%;
+    }
+    100%{
+        height: 0px;
+    }
 }
 /*** CSS3 Animations ***/
 div.content{
@@ -291,9 +326,6 @@ div.content{
     -webkit-animation: rotacion 10s infinite linear;
     animation-play-state: paused;
     box-shadow: 0 5px 15px #888;
-}
-div.content:hover{
-    animation-play-state: paused;
 }
 div.content img{
     width: 100%;
@@ -316,42 +348,7 @@ div.content img{
     }
 }
 /* 3d */
-.box3d{
-    display: inline-block;
-    position: relative;
-    padding-left: 50%;
-    transition-duration: 0.5s;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transform-origin: left center;
-}
-.box3d > div{
-    border: 2px solid black;
-    position: absolute;
-    margin: 10px auto;
-    left: 100px;
-    width: 200px;
-    height: 160px;
-    overflow: hidden;
-    padding: 5px;
-    text-align: justify;
-}
-.front{
-    background: green;
-}
-.back{
-    background: red;
-    -moz-transform: translateZ(-100px) rotateY(90deg);
-    -webkit-transform: translateZ(-100px) rotateY(90deg);
-    left: 100px;
-}
-.box3d:hover{
-    -webkit-transform: rotateY(-90deg);
-    transform: rotateY(-90deg);
-    -webkit-perspective: 800px; /* Chrome, Safari, Opera */
-    perspective: 800px;
-}
+
 /*jsproject*/
 div#dni{
     background-image: url("../img/proiectos/dni.png");
@@ -502,7 +499,7 @@ footer a{
     margin-top: 2%;
     width: 20vw;
     margin-left: 4vw;
-    }   
+    } 
     section#skills{
     background-repeat: no-repeat;
     }
@@ -584,6 +581,7 @@ footer a{
     margin-left: 3vw;
     width: 45vw;
     height: 40vh;
+    display: inline-block;
     } 
     nav{
         padding-left: 20%;
@@ -811,5 +809,5 @@ input:focus, textarea:focus {
 	color: #FFF;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;		
+	-webkit-border-radius: 3px;
 }
