@@ -28,8 +28,14 @@ function changeBg(a,b){
     for (i = 0; i <z.length; i++) {
       z[i].style.background = b;
     }
-    
-    //document.getElementById("copycolor").style.color = x;
 }
-// sticky header 
+function startAnim(){
+    // Code for Chrome, Safari, and Opera
+    document.getElementById("earth").style.WebkitAnimationPlayState = "running";
+}
+function stopAnim(){
+    // Code for Chrome, Safari, and Opera
+    document.getElementById("earth").style.WebkitAnimationPlayState = "paused";
+}
+
 
