@@ -53,6 +53,9 @@ function validar() // calculo letra DNI
     document.formulario.linea.value=letras[calculada];
    
    }
+function gracias(){
+    alert("Gracias por contactarme !!!");
+}
 
 
 
