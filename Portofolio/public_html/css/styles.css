@@ -46,6 +46,9 @@ p {
 #down > p{
     font-size: 1.2em;
 }
+li{
+    font-size: 1em;
+}
 section.wrap{
     width: 100vw;
     min-height: 100%;
@@ -145,6 +148,7 @@ section#cv{
 }
 div.cvstudychild{
     width: 80%;
+    min-height: 250px;;
     margin-left: 10%;
     margin-top: 5%;
     border: 1px solid graytext;
@@ -179,7 +183,7 @@ div.cvstudychild#cv h1{
 }
 /***** SKILLS SECTION *****/
 section#skills{
-    background-image: url(../img/bg/skills_bg.jpg);
+    background-image: url(../img/bg/skills.png);
     background-position: center;
     background-repeat: repeat-y;
     background-attachment: fixed;
@@ -463,7 +467,7 @@ section#contact div#down{
 footer{
     position: absolute;
     bottom: 10px;
-    right: 15px;
+    right: 25px;
 }
 footer a{
     color: #fea314;
@@ -581,6 +585,7 @@ footer a{
     margin-left: 3vw;
     width: 45vw;
     height: 40vh;
+    min-height: 100%;
     display: inline-block;
     } 
     nav{
@@ -593,6 +598,16 @@ footer a{
     div.jsproj img{
         width: 70%;
     }
+    #down p{
+        font-size: 0.8em;
+    }
+    section#contact div.contactchild{
+        position: relative;
+        top: -50px;
+    }
+    footer{
+    left: 25px;
+}
 }
 /************* NAV **********/
 
@@ -781,7 +796,7 @@ input, textarea {
 textarea {
 	width: 100%;
 	height: 100px;
-	max-width: 300px;
+	max-width: 200px;
 }
 
 input:hover, textarea:hover,
