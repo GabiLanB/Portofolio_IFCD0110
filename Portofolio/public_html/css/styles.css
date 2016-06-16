@@ -17,34 +17,38 @@ body{
 }
 h1{
     font-family: "roboto";
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: bold;
     text-align: center;
     color: #adcc00;
     text-shadow: #fffff0 1px 1px 0;
     height: 10%;
-    padding: 1%; /* esto es para centrar un poco el contenido del h1*/
+    padding: 5px; /* esto es para centrar un poco el contenido del h1*/
 }
 h2{
     font-family: "lora";
-    font-size: 1.6em;
+    font-size: 1.2em;
     color: #262932;
     text-align: center;
     margin: 0 auto;
     padding: 3px;
 }
 h3{
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 p {
     text-align: justify;
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #fffff0;
     padding: 20px;
     font-family: "lora";
+    margin: auto;
 }
 #down > p{
-    font-size: 1.2em;
+    font-size: 1.1em;
+}
+#slide  p{
+    height: 100%
 }
 li{
     font-size: 1em;
@@ -117,6 +121,7 @@ div#main, div#slideshow{
     margin: 5vh 10%;
     z-index: 101;
     position: relative;
+
     }
     div#slideshow{
     background-color: rgba(38, 41, 50, 0.5);
@@ -128,11 +133,11 @@ div#main div:first-child{
     border-radius: 50%; 
     background-color: rgba(38, 41, 50, 0.5);
     text-align: center;
-}
+	}
 div#main div:first-child img{
     width: 50%;
     padding-top: 20%;
-}
+	}
 div#main div:last-child{
     position: absolute;
     height: 20%;
@@ -141,7 +146,7 @@ div#main div:last-child{
     vertical-align: top;
     bottom: 30px;
     left: 30px;
-}
+	}
 /*************************** Study section **************************/
 section#cv{
     background-color: #fffff0;
@@ -246,6 +251,12 @@ div.myworkchild h2{
     font-size: 1.2em;
     padding-top: 40px;
 }
+.proiectos figcaption a{
+	color: #fffff0;
+	text-decoration: none;
+	font-style: "lora", tahoma;
+	font-size: 0.8em;
+}
 #btn{
     padding-top: 10%;
 }
@@ -279,10 +290,21 @@ button {
 }
 div.jsproj{
     text-align: center;
+    height: 50vh;
+    margin: auto;
+    height: 100%;
 }
 div.jsproj img{
     width: 80%;
-}.boximg{
+    height: 100%;
+    }
+div.jsproj > div{
+    margin: 0 auto;
+}
+ #imc{
+ 	height: 100%;
+ }
+.boximg{
     /**/
     position: relative;
     background-image: url("../img/skills/gabidev.png");
@@ -355,9 +377,13 @@ div.content img{
 
 /*jsproject*/
 div#dni{
+    width: 80%;
+    height: 100%;
+    margin-top: 0 auto;
     background-image: url("../img/proiectos/dni.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 div#dni h2{
     color: #fffff0;
@@ -377,29 +403,18 @@ div#dni h2{
 }
 .jsproj input:hover{
     background-color: #fea314;
-    color: #111;
+    color: #fffff0;
 }
 .jsproj input[type="button"]{
     width: 100px;
     border-radius: 10px;
 }
-.ball {
-  width: 100%;
-  height: 100%;
-  background-color: #030;
-  position: relative;
-  cursor: pointer;
-}
- .ball .point {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background-color: #f00;
-  border-radius: 50%;
-}
-
+.jsprod h2{
+		height: 10%;
+	}
+.jsprod #form{
+	height: 90%;
+	}
 
 /******************* CONTACT *****************/
 section#contact h1{
@@ -471,6 +486,7 @@ footer{
 }
 footer a{
     color: #fea314;
+    text-decoration: none;
 }
 #social a{
     text-decoration: none;
@@ -482,10 +498,14 @@ footer a{
 }
 #social ul#footernav{
     position: relative;
-    bottom: 10px;
+    bottom: 0px;
 }
 
 @media screen and (min-width: 680px){ /* Not Mobile*/
+    p{
+        font-size: 1.2em
+    }
+
     section.wrap{
     width: 100%;
     height: 100vh;
@@ -521,7 +541,6 @@ footer a{
     }
     div#main, div#slideshow{
     width: 30%;
-    height: 60vh;
     margin-left: 5vw;
     margin-top: 30vh;
     float:left;
@@ -574,13 +593,20 @@ footer a{
         border-left: 4px solid #fffff0;
         border-right: 4px solid #fffff0;
     }
-    div.jsproj img{
-        width: 60%;
+    div.jsproj #dni {
+    	margin: 0 auto;
+        width: 80%;
         height: 100%;
     }
 }
 
 @media screen and (max-width: 1000px) and (min-width: 680px){ /* Tablets */
+    /*div#main, div#slideshow{
+    height: 40vh;
+    }*/
+    div#slideshow p{
+    	font-size: 1em;
+    }
     div.cvstudychild{
     margin-left: 3vw;
     width: 45vw;
@@ -589,13 +615,17 @@ footer a{
     display: inline-block;
     } 
     nav{
-        padding-left: 20%;
+        padding-left: 10%;
         padding-right: 5%;
     }
     nav ul li a{
         font-size: 1em;
     }
     div.jsproj img{
+        width: 70%;
+    }
+    div.jsproj #dni {
+        margin: 0 auto;
         width: 70%;
     }
     #down p{
@@ -607,7 +637,11 @@ footer a{
     }
     footer{
     left: 25px;
-}
+    }
+    div.copycolor2 img{
+        height: 100%;
+    }
+
 }
 /************* NAV **********/
 
@@ -670,6 +704,20 @@ ul.topnav li.icon {display: none;}
     transition: 0.5s;
     color: snow;
   }
+  ul.topnav li{
+    width: 50%;
+    }
+    ul.topnav li.icon{
+        width: 50%;
+        position: absolute;
+    text-align: right;
+    margin: 0 auto;
+    right: 10px;
+    top: 0;
+    border: 0 !important;
+    padding-top: 10px;
+    }
+
 
 }
 
@@ -698,12 +746,12 @@ ul.topnav li.icon {display: none;}
   }
   ul.topnav.responsive li.icon {
     position: absolute;
-    text-align: center;
+    text-align: right;
     margin: 0 auto;
-    right: 0;
+    right: 10px;
     top: 0;
     border: 0 !important;
-    padding-top: 15px;
+    padding-top: 10px;
   }
   ul.topnav.responsive li.icon:hover{
       padding-left: 1px;
@@ -825,4 +873,20 @@ input:focus, textarea:focus {
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
+}
+/***************** SOCIAL MEDIA *************/
+.facebook:hover{
+	border-bottom: 4px solid #3b5998;
+}
+.linkedin:hover{
+	border-bottom: 4px solid #007bb5;
+}
+.google:hover{
+	border-bottom: 4px solid #dd4b39;
+}
+.github:hover{
+	border-bottom: 4px solid #000;
+}
+.freecodecamp:hover{
+	border-bottom: 4px solid #006600;
 }
